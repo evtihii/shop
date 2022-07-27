@@ -7,6 +7,6 @@ import { HoverProductDirective } from './directives/hover-product.directive';
 @NgModule({
   imports: [SharedModule],
   declarations: [ProductComponent, ProductListComponent, HoverProductDirective],
-  exports: [ProductComponent, ProductListComponent],
+  exports: [ProductListComponent],
 })
 export class ProductsModule {}

@@ -18,6 +18,7 @@ export class CartService {
   constructor() {}
 
   addToCart(product: Product) {
+    // для чего используется take(1)?
     this.productsInCart$.pipe(take(1)).subscribe((arr) => {
       let alreadyInCart = arr.filter((el) => el.product.id === product.id);
 

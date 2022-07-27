@@ -9,11 +9,13 @@ import { CartService } from '../../services/cart.service';
 })
 export class CartListComponent implements OnInit {
   checked = true;
-  productsInCart: ProductsInCart[] = []
+  productsInCart: ProductsInCart[] = [];
   catSum: number = 0;
   constructor(public cart: CartService) { }
 
   ngOnInit(): void {
+    // разве может быть такое, что свойство productsInCart$ не существует?
+    // это же обязательное свойство в сервисе
     this.cart.productsInCart$?.subscribe(e => this.productsInCart = e)
   }
 

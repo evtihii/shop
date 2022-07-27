@@ -10,6 +10,8 @@ import { ProductsInCart } from '../../models/products-in-cart.model';
 export class CartItemComponent implements OnInit {
   @Input() product!: ProductsInCart;
 
+  // я бы так не делал, так как компонент получает данные,
+  // то и пусть отдает их родителю, а не выполняет над ними операцию с помощью сервиса
   constructor(private cart: CartService) {}
 
   ngOnInit(): void {}
